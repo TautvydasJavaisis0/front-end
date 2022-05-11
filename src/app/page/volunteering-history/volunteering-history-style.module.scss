@@ -1,0 +1,142 @@
+@import '~app/style/style';
+
+.activeVolunteering{
+  border: none;
+}
+
+.content{
+  padding-bottom: 40px;
+}
+
+.page-content {
+  background: linear-gradient(#fb984c 40vh, #f0f0f0 40vh);
+}
+
+.volunteeringLabel{
+  font-size: 18px;
+  letter-spacing: 1.25px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.expiredVolunteering{
+  border: none;
+}
+
+.showAll{
+  font-size: 13px;
+  letter-spacing: 0.15px;
+  color: #EC8A2F;
+  margin-bottom: 20px;
+}
+
+.allContext {
+  margin-top: 1px;
+}
+
+.listInitiative {
+  Height: 150px;
+  //Height: 205px;
+  margin-bottom: 20px;
+  border-radius: $button-border-radius;
+  border: none;
+  background-color: #f9f9f9;
+  box-sizing: border-box;
+  box-shadow: 0 16px 59px rgba(112, 144, 176, 0.2);
+
+  .textBox {
+    overflow: hidden;
+    height: 110px;
+    margin-left: 20px;
+    padding-top: 20px;
+
+    .mainText {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      width: auto;
+      margin-bottom: 5px;
+      font-size: 15px;
+      .title {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        //font-family: Poppins;
+        font-style: $button-font-style;
+        font-weight: 600;
+        letter-spacing: $form-label-letter-spacing;
+        color: #3c3c3c;
+      }
+
+    }
+
+    .additionalInfo {
+      display: flex;
+      font-style: $button-font-style;
+
+      .description {
+
+        letter-spacing: $button-letter-spacing;
+        color: #515151;
+        text-align: left;
+        display: -webkit-box;
+        overflow : hidden;
+        text-overflow: ellipsis;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        width: 300px;
+      }
+    }
+
+  }
+
+
+  .additionalDetails {
+    overflow: hidden;
+    height: 15px;
+    display: flex;
+    float: right;
+    margin-top: 10px;
+    svg {
+      margin-right: 15px;
+    }
+  }
+}
+
+@media only screen and (min-width: 450px) {
+
+  .title {
+    font-size: 16px;
+    width: 270px;
+
+  }
+
+  .description {
+    font-size: 13px;
+    height: 80px;
+    width: 265px;
+  }
+
+  .participantsFiller {
+    margin-left: 35px;
+  }
+
+  .participants {
+    margin-left: 40px;
+    font-size: 14px;
+  }
+
+  .feature {
+    padding: 0 10px;
+    height: 23px;
+    margin-left: 10px;
+    width: 105px;
+  }
+
+  .featureList {
+    font-size: 13px;
+  }
+
+}
+
+

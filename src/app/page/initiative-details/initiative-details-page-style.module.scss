@@ -1,0 +1,211 @@
+@import '~app/style/style';
+
+.page-content-initiative {
+  height: auto;
+}
+
+@mixin section {
+  display: flex;
+  align-items: center;
+}
+
+@mixin tekstas {
+  font-size: 14px;
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  line-height: 24px;
+  color: $text-color-general;
+}
+
+@mixin box {
+  box-sizing: border-box;
+  border-radius: 4px;
+  margin: 5px 0 0;
+}
+
+.more-modal {
+  width: 24px;
+  height: 24px;
+  background-image: url('~app/resources/icons/more-modal.svg');
+  background-size: cover;
+  border-style: none;
+  background-color: transparent;
+}
+
+:global(.ant-modal-body) {
+  padding: 12px;
+  line-height: 2.2;
+  letter-spacing: 1.25px;
+}
+
+.basic-section {
+  @include section;
+}
+
+.location-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top-section {
+  @include section;
+  padding-top: 16px;
+  //margin: 0 32px;
+
+  h2 {
+    margin: 0 16px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 20px;
+    letter-spacing: 1.25px;
+    /* identical to box height */
+    display: flex;
+    align-items: center;
+    color: #464646;
+  }
+}
+
+.arrow-button-back {
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  width: 25px;
+  height: 25px;
+  background-image: url('~app/resources/icons/rodyklė.svg');
+  background-size: cover;
+  border-style: none;
+  background-color: transparent;
+  flex-shrink: 0;
+}
+
+.organiser-icon {
+  width: 20px;
+  height: 20px;
+  background-image: url('~app/resources/icons/organiser.svg');
+  margin-right: 5px;
+}
+
+.description {
+  @include tekstas;
+  letter-spacing: 1.25px;
+}
+
+.tekstas {
+  @include tekstas;
+}
+
+.tekstas-organizatorius {
+  @include tekstas;
+  font-size: 12px;
+  letter-spacing: 1.25px;
+}
+
+.tekstas-asmuo {
+  @include tekstas;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.4px;
+}
+
+.tekstas-adresas {
+  @include tekstas;
+  font-size: 12px;
+  letter-spacing: 0.4px;
+  line-height: 16px;
+}
+
+
+.line-separator {
+  border-bottom: 1px solid #d7d7d7;
+  margin: 35px -20px 20px;
+}
+
+.info-title {
+  @include tekstas;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0.15px;
+  font-size: 15px;
+  margin: 15px 0 5px;
+}
+
+.content-title {
+  @include tekstas;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.location-box {
+  @include box;
+  border: 1px solid #bfbfbf;
+  padding: 7px 10px;
+}
+
+.participant-box {
+  @include box;
+  border: 1px solid #d7d7d7;
+}
+
+.map-pin {
+  width: 24px;
+  height: 23px;
+  background-image: url('~app/resources/icons/map-pin.svg');
+}
+
+.featureList {
+  display: flex;
+  letter-spacing: 0.25px;
+  margin-bottom: 15px;
+
+  .feature {
+    border-radius: 16px;
+    background: rgba(33, 33, 33, 0.08);
+    align-items: center;
+    text-align: center;
+    @include tekstas;
+    font-size: 12px;
+    padding: 1px 10px;
+    margin-right: 10px;
+    text-transform: capitalize;
+  }
+}
+
+.button-text {
+  @include tekstas;
+  color: #fff;
+}
+
+@mixin button {
+  height: 44px;
+  margin: 10px -20px 0;
+  position: sticky;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-apply {
+  @include button;
+  background-color: #fb984c;
+}
+
+.button-resign {
+  @include button;
+  background-color: #de7771;
+}
+
+:global(.ant-progress-inner) {
+  border: 1px solid #d7d7d7;
+}
+
+:global(.ant-progress-bg) {
+  height: 21px !important;
+  transition: all 1s cubic-bezier(0.08, 0.82, 0.17, 1) 0s;
+}
+
+
+
+

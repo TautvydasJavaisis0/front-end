@@ -1,0 +1,25 @@
+@import '~app/style/style';
+
+.empty-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 50px;
+  height: inherit;
+
+  h1 {
+    font-size: 18px;
+    line-height: 16px;
+    letter-spacing: 1.25px;
+    margin: 50px 0;
+    color: $text-color-general;
+  }
+
+  .create-initiative-button {
+    background-color: #fb984c;
+    width: 232px;
+    height: 36px;
+    color: #fff;
+  }
+}

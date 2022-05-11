@@ -1,0 +1,122 @@
+@import '~app/style/style';
+
+.top-row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5vh;
+}
+
+.logo {
+  background-image: url('~app/resources/icons/logo-kartu.svg');
+  width: 88px;
+  height: 0;
+  background-size: cover;
+  padding-bottom: 28px;
+  cursor: pointer;
+}
+
+
+.f{
+  height: initial;
+}
+
+.welcome {
+  @include main-page-header-text;
+  position: relative;
+  margin-top: $text-greeting-margin-top;
+  color: $text-header-color-bright;
+  padding-left: $white-box-padding-sides;
+  font-size: $text-registration-header-font-size;
+}
+
+.content {
+  background-image: url('~app/resources/backgrounds/login-bg.svg');
+  background-repeat: no-repeat;
+  background-position-x: 100%;
+  background-color: $background-color-main;
+}
+
+.login-form-container {
+  margin-top: 8vh;
+  width: 78%;
+  margin-left: 20px;
+}
+
+.formButton button {
+  display: block;
+  width: 100%;
+  background-color: $button-login-background-color;
+  border: none;
+  margin-top: 20px;
+}
+
+.form-field-shadow {
+
+  div > div > div {
+    box-shadow: 0 0 85px rgba(251, 152, 76, 0.2);
+  }
+}
+
+.form-field-input {
+  background-color: #fff;
+  border: 0 solid transparent;
+  height: 36px !important;
+}
+
+.registration-form-container {
+  width: 78%;
+  margin-left: 20px;
+}
+
+.formButton button:hover {
+  background-color: #fb984c;
+}
+
+.formButton button:focus {
+  background-color: #fb984c;
+  border-color: #fb984c;
+}
+
+.prisijungimoregistracijos {
+  margin-top: 2px;
+  display: flex;
+  justify-content: flex-end;
+  grid-column-gap: 30px;
+}
+
+.prisijungimoregistracijos h3 {
+  color: $text-registration-secondary-header-font-color;
+  font-weight: 500;
+  width: min-content;
+  cursor: pointer;
+  padding-top: 6px;
+  font-size: 14px;
+  // Active page indication
+  &.active-form-type {
+    border-bottom: 2px solid $active-registration-login-header-border-color;
+    color: $text-header-color;
+  }
+}
+
+.checkbox-label {
+  color: $form-label-font-color;
+
+  span > span {
+    border: 2px solid #fb984c;
+    border-radius: 2px;
+  }
+}
+
+@media  screen and (min-height: 585px) {
+
+  .content {
+    overflow: hidden;
+  }
+}
+
+@media  screen and (max-height: 585px) {
+
+  .content {
+    overflow: scroll;
+  }
+}

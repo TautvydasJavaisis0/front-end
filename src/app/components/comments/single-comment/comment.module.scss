@@ -1,0 +1,132 @@
+@import '~app/style/style';
+
+.comment-container {
+  margin-top: 17px;
+}
+
+.question-container {
+  display: flex;
+  align-items: flex-start;
+  // question text
+  span {
+    margin-left: 7px;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 24px;
+    letter-spacing: 0.15px;
+    color: $text-comment-question-font-color;
+  }
+}
+
+.answer-container {
+  margin: 5px 7px 5px 23px;
+  padding: 15px 20px 15px 14px;
+  border-radius: 4px;
+  overflow: auto;
+  border: 1px solid $answer-box-border-color;
+  box-sizing: border-box;
+  // Deleting brake points
+  br {
+    display: none;
+  }
+  // Date
+  .date {
+    display: block;
+    font-size: 10px;
+    line-height: 24px;
+    letter-spacing: 0.15px;
+    color: #7a7a7a;
+  }
+
+  .answer {
+    font-size: 12px;
+    line-height: 24px;
+    letter-spacing: 0.15px;
+    color: $text-comment-answer-font-color;
+    // Because deleting <br>, need to add whitespace after collapsing lines
+    > span span {
+      padding-right: 5px;
+    }
+  }
+
+  .answer-button {
+    float: right;
+    display: flex;
+    cursor: pointer;
+
+    span {
+      margin-left: 4px;
+      font-weight: 600;
+      font-size: 11px;
+      line-height: 22px;
+      letter-spacing: 0.15px;
+
+      color: $answer-to-comment-button-text-color;
+    }
+  }
+}
+// While trying to answer a queston
+.answer-container-answering-question {
+  padding: 0;
+}
+// While there are is no answer
+.answer-container-empty {
+  display: none;
+}
+
+.answer-field {
+  background-color: transparent;
+}
+
+.submit-answer-button-container {
+  background-color: #dfdfdf;
+  overflow: auto;
+
+  .submit-answer-button {
+    float: right;
+    cursor: pointer;
+    margin-right: 16px;
+
+    span {
+      font-weight: 500;
+      font-size: 13px;
+      line-height: 24px;
+      letter-spacing: 0.15px;
+      color: #727272;
+    }
+  }
+}
+
+.expand-more-button {
+  margin-left: auto;
+  font-size: 22px;
+  border: none;
+}
+// Nice CSS trick to let it click anywhere to disappear
+// https://www.simonewebdesign.it/pure-css-onclick-context-menu/
+.expand-more-button + .expand-menu:active,
+.expand-more-button:focus + .expand-menu {
+  display: block;
+}
+
+.expand-menu {
+  display: none;
+  position: absolute;
+  background-color: $expand-menu-background-color;
+  right: 18px;
+  padding: 15px 12px 3px 8px;
+  border-radius: $default-border-radius;
+  filter: drop-shadow(-3px 0 19px rgba(112, 144, 176, 0.15)) drop-shadow(0 4px 4px rgba(112, 144, 176, 0.2));
+
+  div {
+    margin-bottom: 10px;
+
+    span {
+      margin-left: 5px;
+      font-size: 11px;
+      line-height: 16px;
+      letter-spacing: 1.25px;
+      color: #464646;
+    }
+  }
+}

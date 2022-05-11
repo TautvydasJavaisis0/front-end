@@ -1,0 +1,383 @@
+@import '~app/style/style';
+
+.pageContent {
+  //overflow: auto;
+  margin-bottom: 36px;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+}
+// When there are no initiatives
+.page-content-empty {
+  margin-bottom: 0;
+  height: 100vh;
+}
+
+
+.allContext {
+  margin-top: 1px;
+}
+
+.top {
+  margin-bottom: 10px;
+  height: 13px;
+}
+
+.topInfo {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  width: auto;
+  justify-content: space-between;
+
+  .topName {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    color: $text-color-general;
+  }
+
+  .filterButton {
+    float: right;
+    height: 50px;
+    margin-top: 10px;
+    padding: 1px 10px 5px;
+    border-radius: $button-border-radius;
+  }
+
+  .filterButtonColor{
+    background-color: transparent;
+    box-shadow: none;
+    border: none;
+  }
+
+}
+
+.listInitiative {
+  Height: 150px;
+  //Height: 205px;
+  margin-bottom: 20px;
+  border-radius: $button-border-radius;
+  border: none;
+  background-color: #f9f9f9;
+  box-sizing: border-box;
+  box-shadow: 0 16px 59px rgba(112, 144, 176, 0.2);
+
+
+  .close {
+    float: right;
+    margin-top: 6px;
+    margin-right: 10px;
+    height: 20px;
+  }
+
+  .textBox {
+    overflow: hidden;
+    height: 105px;
+    margin-left: 20px;
+
+    .mainText {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      width: auto;
+
+      .title {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        //font-family: Poppins;
+        font-style: $button-font-style;
+        font-weight: 600;
+        letter-spacing: $form-label-letter-spacing;
+        color: #3c3c3c;
+      }
+
+      .participants {
+        float: right;
+        align-items: center;
+        letter-spacing: $form-label-letter-spacing;
+        font-weight: 500;
+        color: #7b7b7b;
+        font-style: $button-font-style;
+      }
+    }
+
+    .additionalInfo {
+      display: flex;
+      font-style: $button-font-style;
+
+      .description {
+
+        letter-spacing: $button-letter-spacing;
+        color: #515151;
+        text-align: left;
+        display: -webkit-box;
+        overflow : hidden;
+        text-overflow: ellipsis;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+      }
+
+      .participantsFiller {
+        float: right;
+
+        :global(.ant-progress-circle-trail) {
+          stroke: $circle-progress-trail-stroke;
+          stroke-width: 10;
+        }
+
+        :global(.ant-progress-circle .ant-progress-text) {
+          color: #7b7b7b;
+          font-size: 13px;
+          letter-spacing: $form-label-letter-spacing;
+          font-weight: 500;
+        }
+
+        :global(.ant-progress-circle.ant-progress-status-success .ant-progress-text) {
+          color: #7b7b7b;
+        }
+
+        :global(.ant-progress-circle-path) {
+          stroke-width: 10;
+        }
+      }
+    }
+
+  }
+
+
+  .additionalDetails {
+    overflow: hidden;
+    height: 15px;
+    display: flex;
+    float: right;
+
+    svg {
+      margin-right: 15px;
+    }
+  }
+}
+
+
+.list {
+  height: 100%;
+}
+
+.empty-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 50px;
+  height: inherit;
+
+  p {
+    margin-top: 21px;
+    margin-bottom: 23px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: 0.25px;
+
+    color: #464646;
+  }
+
+  .create-initiative-button {
+    background-color: $create-initiative-button-background-color;
+    width: 232px;
+    height: 36px;
+    color: #fff;
+    //padding-top: 8px;
+    //padding-bottom: 8px;
+
+    span {
+      margin-left: 7px;
+    }
+  }
+}
+
+@media only screen and (max-width: 450px) {
+
+  .title {
+    font-size: 16px;
+    width: 270px;
+
+  }
+
+  .description {
+    font-size: 13px;
+    height: 80px;
+    width: 265px;
+  }
+
+  .participantsFiller {
+    margin-left: 15px;
+  }
+
+  .participants {
+    margin-left: 20px;
+  }
+
+  .feature {
+    padding: 0 10px;
+    height: 23px;
+    margin-left: 10px;
+    width: 105px;
+  }
+
+  .featureList {
+    font-size: 12.5px;
+  }
+}
+
+@media only screen and (min-width: 450px) {
+
+  .title {
+    font-size: 16px;
+    width: 270px;
+
+  }
+
+  .description {
+    font-size: 13px;
+    height: 80px;
+    width: 265px;
+  }
+
+  .participantsFiller {
+    margin-left: 35px;
+  }
+
+  .participants {
+    margin-left: 40px;
+    font-size: 14px;
+  }
+
+  .feature {
+    padding: 0 10px;
+    height: 23px;
+    margin-left: 10px;
+    width: 105px;
+  }
+
+  .featureList {
+    font-size: 13px;
+  }
+
+}
+
+
+@media only screen and (max-width: 430px) {
+
+  .title {
+    font-size: 16px;
+    width: 240px;
+  }
+
+  .description {
+    font-size: 13px;
+    width: 240px;
+  }
+
+  .participantsFiller {
+    margin-left: 20px;
+  }
+
+  .participants {
+    margin-left: 30px;
+    font-size: 13px;
+  }
+
+  .feature {
+    height: 23px;
+    margin-left: 10px;
+    width: 105px;
+  }
+
+  .featureList {
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 405px) {
+
+  .title {
+    font-size: 15px;
+    width: 230px;
+  }
+
+  .description {
+    font-size: 13px;
+    height: 80px;
+    width: 240px;
+  }
+
+  .participantsFiller {
+    margin-left: 10px;
+  }
+
+  .participants {
+
+    font-size: 13px;
+  }
+
+  .feature {
+    height: 23px;
+    margin-left: 5px;
+    width: 100px;
+  }
+
+  .featureList {
+    font-size: 13px;
+  }
+}
+
+@media only screen and (max-width: 385px) {
+
+  .description {
+    width: 200px;
+  }
+
+  .participantsFiller {
+    margin-left: 25px;
+  }
+
+  .participants {
+    margin-left: 25px;
+    font-size: 12px;
+  }
+
+  .feature {
+    height: 21px;
+    margin-left: 5px;
+    width: 95px;
+  }
+
+  .featureList {
+    font-size: 12px;
+  }
+
+  .title {
+    width: 210px;
+  }
+}
+
+@media only screen and (max-width: 365px) {
+
+  .participantsFiller {
+    margin-left: 18px;
+  }
+
+  .title {
+    width: 210px;
+  }
+
+  .participants {
+    margin-left: 20px;
+    font-size: 11px;
+  }
+
+
+}

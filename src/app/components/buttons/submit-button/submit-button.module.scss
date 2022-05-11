@@ -1,0 +1,15 @@
+@import '~app/style/style';
+
+.submit-button {
+  background-color: $submit-button-background-color;
+  border-radius: $button-border-radius;
+  padding: $submit-button-padding;
+  height: auto;
+  span {
+    font-weight: $button-font-weight;
+    letter-spacing: $button-letter-spacing;
+    line-height: $button-line-height;
+    font-size: $button-font-size;
+    color: $submit-button-font-color;
+  }
+}

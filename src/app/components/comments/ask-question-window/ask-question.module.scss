@@ -1,0 +1,66 @@
+@import '~app/style/style';
+
+.headerContainer {
+  margin-top: 15px;
+  display: flex;
+  align-items: flex-start;
+
+  h3 {
+    text-align: left;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 16px;
+    letter-spacing: 1.25px;
+    color: $text-header-color;
+  }
+
+  span {
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 1.25px;
+    color: $text-header-color;
+  }
+
+  .arrow-button {
+    position: relative;
+    height: 24px;
+    padding: 0 10px;
+
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+}
+$_field-margin: 30px;
+
+.field {
+  margin-top: 17px;
+  padding-left: $_field-margin;
+  padding-right: $_field-margin;
+
+  textarea {
+    min-height: 106px;
+    max-height: 50vh;
+    background-color: #f0f0f0;
+  }
+}
+
+.submit-button-container {
+  position: absolute;
+  margin-left: -$_field-margin - 20px;
+  width: 100%;
+  bottom: 0;
+
+  button,
+  button:active,
+  button:hover,
+  button:focus {
+    background-color: #fb984c;
+    border: 0;
+    width: 100%;
+    height: 44px;
+    border-radius: 0;
+  }
+}

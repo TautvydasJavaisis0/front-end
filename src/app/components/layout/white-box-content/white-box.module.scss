@@ -1,0 +1,23 @@
+@import '~app/style/style';
+
+.white-box-container {
+  @include flex-center;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  z-index: 5;
+  @media(min-width: $grid-md) {
+    width: 50vw;
+    margin: auto;
+  }
+}
+
+.white-box {
+  //position: relative;
+  background-color: $white-box-background-color;
+  border-radius: $white-box-border-radius;
+  padding: $white-box-padding;
+  width: 100%;
+  height: min-content;
+  //top: 15vh;
+}

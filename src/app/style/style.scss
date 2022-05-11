@@ -1,0 +1,151 @@
+@import './layout';
+
+* {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+}
+
+input[name = 'email'],
+input[name = 'password'] {
+  background-color: #fff !important;
+}
+
+input[name = 'title'],
+input[type = 'search'],
+input[name = 'fullName'],
+input[name = 'organization'],
+input[name = 'address'] {
+  height: 34px !important;
+}
+
+input {
+  height: 30px !important;
+}
+
+:global(.ant-select-show-search.ant-select:not(.ant-select-customize-input) .ant-select-selector) {
+  height: 34px;
+}
+
+@mixin custom-swiper-arrow {
+  background-size: 100% auto;
+  background: url('../resources/icons/rodyklė.svg') no-repeat center;
+  padding: 35px;
+  top: 90%;
+  z-index: 20;
+  // Disabling default arrow
+  &::after {
+    display: none;
+  }
+  // Disabling when not active with animation
+  &:global(.swiper-button-disabled) {
+    opacity: 0;
+    pointer-events: none;
+  }
+  transition: all $animation-length ease;
+}
+
+:global(.swiper-button-prev) {
+  @include custom-swiper-arrow;
+  transform: rotate(180deg);
+  margin-left: -25px;
+}
+
+:global(.swiper-button-next) {
+  @include custom-swiper-arrow;
+  margin-right: -25px;
+}
+
+// Form labels
+:global(.ant-form-item-label label) {
+  //font-family: Poppins;
+  font-weight: $form-label-font-weight;
+  font-size: $form-label-font-size;
+  line-height: $form-label-line-height;
+  letter-spacing: $form-label-letter-spacing;
+  color: $form-label-font-color;
+}
+
+
+@media screen and (max-width: 450px){
+  :global(.ant-picker-panel-container){
+    transform: scale(0.9);
+    margin-left: -20px !important;
+  }
+}
+
+@media screen and (max-width: 420px){
+  :global(.ant-picker-panel-container){
+  margin-left: 20px !important;
+
+  }
+}
+
+@media screen and (max-width: 400px){
+  :global(.ant-picker-panel-container){
+    margin-left: 5px !important;
+  }
+  :global(.ant-picker-input){
+    input{
+      font-size: 13px;
+    }
+
+  }
+}
+
+
+@media screen and (max-width: 380px){
+  :global(.ant-picker-panel-container){
+    transform: scale(0.8);
+    margin-left: -5px !important;
+
+  }
+  :global(.ant-picker-input) {
+    input {
+      font-size: 12px;
+    }
+  }
+}
+
+
+@media screen and (max-width: 360px){
+  :global(.ant-picker-panel-container){
+    transform: scale(0.75);
+    margin-left: -20px !important;
+    margin-bottom: -25px !important;
+  }
+  :global(.ant-picker-input) {
+    input {
+      font-size: 11px;
+    }
+  }
+}
+
+@media screen and (max-width: 360px){
+
+  :global(.ant-picker-input) {
+    input {
+      font-size: 10px;
+    }
+  }
+}
+
+
+
+@media screen and (max-width: 320px){
+  :global(.ant-picker-panel-container){
+    transform: scale(0.7);
+  }
+
+  :global(.ant-picker-input) {
+    input {
+      font-size: 9px;
+    }
+  }
+}
+
+@media screen and (min-width: 450px){
+  :global(.ant-picker-panel-container){
+    transform: scale(0.95);
+    margin-left: -10px !important;
+  }
+}

@@ -1,0 +1,23 @@
+@import '~app/style/style';
+
+.filterButton {
+  @include button-style;
+  padding: 10px 10px 8px 10px;
+  height: auto;
+  float: right;
+  background-color: #FFFFFF;
+  display: flex;
+
+  svg {
+    vertical-align: sub;
+
+    path {
+      fill: $filter-button-font-color;
+    }
+  }
+
+  span {
+    vertical-align: top;
+    color: $filter-button-font-color;
+  }
+}

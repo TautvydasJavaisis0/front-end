@@ -1,0 +1,69 @@
+@import '~app/style/style';
+
+.form-header-container {
+  width: 100%;
+  margin-bottom: 2px;
+
+  .initiative-header {
+    display: inline-block;
+    padding-left: 10px; // Same as Swiper style in create-initiative-form.tsx
+    font-weight: 500;
+  }
+
+  .form-button-close {
+    float: right;
+    font-size: large;
+    font-weight: 800;
+    padding-right: 0;
+  }
+}
+
+.swiper-container {
+  //width: 80vw;
+  width: auto;
+  user-select: none;
+
+  .swiper-slide {
+    padding-bottom: 50px;
+  }
+
+  .form-item {
+    //padding: $form-input-padding;
+    border-radius: $form-input-border-radius;
+    width: 100%;
+  }
+}
+
+.form-button-continue {
+  @include button-style;
+  padding: 0 20px;
+}
+
+.form-button-submit-container {
+  float: right;
+}
+
+.textarea {
+
+  textarea {
+    min-height: 13vh;
+    resize: none;
+    border-radius: $form-input-border-radius;
+  }
+}
+
+.selector div {
+    height: auto !important;
+}
+
+:global(.swiper-container-horizontal .swiper-pagination-bullets) {
+  bottom: 40px;
+}
+
+:global(.swiper-button-next) {
+  transform: scale(0.65) !important;
+}
+
+:global(.swiper-button-prev) {
+  transform: rotate(180deg) scale(0.65)!important;
+}

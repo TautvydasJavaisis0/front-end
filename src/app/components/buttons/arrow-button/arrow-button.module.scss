@@ -1,0 +1,15 @@
+.button-next {
+  position: absolute;
+  cursor: pointer;
+  width: min-content;
+  padding: 10px;
+  //float: right;
+  right: 0;
+  bottom: 0;
+
+  &.pointing-left {
+    left: 0;
+    //float: left;
+    transform: rotate(180deg);
+  }
+}

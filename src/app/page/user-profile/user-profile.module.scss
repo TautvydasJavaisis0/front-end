@@ -1,0 +1,92 @@
+@import '~app/style/style';
+
+.page {
+  position: relative;
+}
+
+.close-button {
+  color: #464646;
+  font-size: large;
+  font-weight: 900;
+  margin-left: -15px;
+}
+
+.title {
+  display: inline-block;
+  margin-top: 15px;
+  margin-left: 5px;
+  font-weight: bold;
+  font-size: $text-user-profile-header-font-size;
+  line-height: 16px;
+  letter-spacing: 1.25px;
+  color: $text-color-general;
+}
+
+.user-details-container {
+  background-color: $background-user-profile-details;
+  border-radius: $default-border-radius;
+  overflow: auto;
+  margin-top: 28px;
+
+  .user-text-container {
+    margin: 24px 0 24px 14px;
+
+    .user-icon {
+      width: 34px;
+      height: 34px;
+      margin-right: 12px;
+    }
+
+    .user-name {
+      @include default-text;
+      color: $text-header-color;
+    }
+  }
+
+  .create-initiative-button {
+    background-color: $create-initiative-background-color;
+    color: $create-initiative-font-color;
+    float: right;
+    margin: 23px 19px 16px;
+    padding: 4px 23px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+  }
+}
+
+.navigations-container {
+  margin-top: 38px;
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.navigation-bar-container {
+  background-color: $background-user-profile-details;
+  padding: 12px 0 12px 17px;
+  cursor: pointer;
+  //height: 40px;
+  border-radius: $default-border-radius;
+
+  img {
+    margin-right: 22px;
+  }
+
+  span {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+    color: $text-header-color;
+  }
+}
+
+.logout-button {
+  float: right;
+  height: 44px;
+
+  span {
+    color: $logout-button-font-color;
+  }
+}

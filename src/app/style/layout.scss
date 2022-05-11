@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap');
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+// Default button style
+@mixin button-style {
+  background-color: $button-background-color;
+  border-radius: $button-border-radius;
+  font-weight: $button-font-weight;
+  letter-spacing: $button-letter-spacing;
+  line-height: $button-line-height;
+  font-size: $button-font-size;
+  color: $button-font-color;
+}
+// Header in main pages
+@mixin main-page-header-text {
+  font-family: Roboto, sans-serif;
+  font-weight: $text-header-font-weight;
+  line-height: $text-header-line-height;
+  color: $text-header-color;
+  font-size: $text-header-font-size;
+  //@media screen and (max-width: $grid-md) {
+  //  line-height: $text-header-line-height-smaller;
+  //}
+}
+
+@mixin default-text {
+  font-family: $text-default-family;
+  font-weight: $text-default-weight;
+  line-height: $text-default-line-height;
+  font-size: $text-default-size;
+}
+
+// Break points
+$grid-sm: 576px;
+$grid-md: 768px;
+$grid-lg: 992px;
+$grid-xl: 1200px;
+$grid-xxl: 1600px;
+
+//Page Content
+$page-content-padding: 20px;
+$page-content-height: 100vh;
+
+// Background
+$background-color-page-content: #f0f0f0;
+$background-color-main: #f8f9fa;
+$background-color-top: #464646;
+$background-color-bottom: #a4a4a5;
+$background-page-gradient: linear-gradient($background-color-top 55%, $background-color-bottom 55%);
+$background-user-profile-details: #e1e1e1;
+// White box (in login and register forms)
+$white-box-background-color: #fff;
+$white-box-border-radius: 10px;
+$white-box-padding-top-bottom: 13px;
+$white-box-padding-sides: 21px;
+$white-box-padding: $white-box-padding-top-bottom $white-box-padding-sides;
+
+// Buttons
+$button-font-color: #fff;
+$button-background-color: #464646;
+$button-font-size: 14px;
+$button-font-weight: 500;
+$button-border-radius: 4px;
+$button-letter-spacing: 1.25px;
+$button-line-height: 16px;
+$button-font-style: normal;
+$button-registration-background-color: #fb984c;
+$button-login-background-color: #fb984c;
+
+$logout-button-font-color: #929292;
+
+// Filter button
+$filter-button-font-color: #464646;
+// Create initiative button (user profile)
+$create-initiative-background-color: #ec8a2f;
+$create-initiative-font-color: #f0f0f0;
+
+// Submit button
+$submit-button-background-color: $button-background-color;
+$submit-button-font-color: $button-font-color;
+$submit-button-padding: 7px 12px;
+
+// Initiatives list
+$create-initiative-button-background-color: #fb984c;
+$circle-progress-trail-stroke: #e5e5e5;
+
+// Text
+$text-default-family: Roboto, sans-serif;
+$text-default-weight: 600;
+$text-default-line-height: 24px;
+$text-default-size: 16px;
+$text-header-color: #464646;
+$text-color-general: #464646;
+// Sveiki and Sveiki sugrize in login and register pages
+$text-header-color-bright: #5e5e5e;
+$text-header-font-weight: 500;
+$text-header-line-height: 48px;
+$text-header-font-size: 32px;
+$text-header-font-size-smaller: 26px;
+$text-header-line-height-smaller: 35px;
+$text-header-secondary-font-size: 20px;
+$text-header-secondary-font-size-smaller: 16px;
+$text-color: #000;
+$text-registration-header-font-size: 32px;
+$text-greeting-margin-top: 15vh;
+// In registration/login headers: 'Prisijungti' 'Registruotis'
+$text-registration-secondary-header-font-color: rgba(136, 136, 136, 0.65);
+
+$text-user-profile-header-font-size: 18px;
+
+// Form labels
+$form-label-font-color: #929292;
+$form-label-font-weight: 500;
+$form-label-font-size: 13px;
+$form-label-line-height: $text-default-line-height;
+$form-label-letter-spacing: 0.15px;
+
+// Comments
+$answer-box-border-color: #c2c2c2;
+$ask-question-button-font-color: #f0f0f0;
+$text-comment-question-font-color: $text-header-color;
+$text-comment-answer-font-color: $text-header-color;
+$answer-to-comment-button-text-color: #848484;
+
+$expand-menu-background-color: #f2f2f2;
+
+$animation-length: 300ms;
+$default-border-radius: 4px;
+
+$form-input-padding: 8px 4px 6px 6px;
+$form-input-border-radius: 4px;
+// Paryskinimas po Registruotis Prisijungti
+$active-registration-login-header-border-color: #ec8a2f;
+
+
+// Hexagon spalvos competence select
+$color-hex-on: rgba(255, 174, 88, 1);
+$color-hex-off: rgba(255, 193, 105, 0.79);
+
+// TODO:
+//  - Need text fonts
+//  - Need button and other hover and active animations

@@ -1,0 +1,74 @@
+.topSection {
+  display: flex;
+  align-items: center;
+  justify-items: flex-start;
+  margin: -20px 0 -10px -30px;
+}
+
+.content {
+
+  margin: 20px;
+  h3 {
+    font-family: Roboto, serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 16px;
+    /* identical to box height, or 89% */
+    letter-spacing: 1.25px;
+    color: #464646;
+    padding-top: 14px;
+  }
+
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid black;
+  }
+
+  th, td {
+    text-align: left;
+    padding: 4px;
+    border: 1px solid black;
+  }
+
+  h2 {
+    padding-top: 16px;
+  }
+
+
+}
+
+.textArea {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.atTop {
+  bottom: initial !important;
+  position: relative !important;
+
+  svg {
+    width: 30px;
+  }
+}
+
+.table{
+  table-layout: fixed;
+  width: 856px;
+}
+
+.columnOne {
+  width: 368px;
+}
+
+.columnTwo {
+  width: 488px;
+}
+
+.tabeless {
+  overflow-x:auto;
+  padding: 8px 0;
+}
+
